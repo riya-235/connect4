@@ -113,7 +113,7 @@ class Connect4Game:
         
         self.player_label = tk.Label(
             info_frame,
-            text="🎮 Player 1's Turn (Red)",
+            text="Player 1's Turn (Red)",
             font=('Arial', 14, 'bold'),
             fg='#e74c3c',
             bg='#1a1a2e'
@@ -149,7 +149,7 @@ class Connect4Game:
         
         reset_button = tk.Button(
             control_frame,
-            text="🔄 New Game",
+            text="New Game",
             font=('Arial', 12, 'bold'),
             bg='#3498db',
             fg='white',
