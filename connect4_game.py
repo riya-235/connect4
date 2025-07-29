@@ -215,20 +215,20 @@ class Connect4Game:
         if self.winning_move(self.board, piece):
             self.game_over = True
             winner = "Player 1 (Red)" if piece == 1 else "Player 2 (Yellow)"
-            messagebox.showinfo("🎉 Game Over!", f"{winner} wins!")
+            messagebox.showinfo("Game Over!", f"{winner} wins!")
             return
         
         if self.is_board_full():
             self.game_over = True
-            messagebox.showinfo("🤝 Game Over!", "It's a draw!")
+            messagebox.showinfo("Game Over!", "It's a draw!")
             return
         
         self.turn = (self.turn + 1) % 2
         
         if self.turn == 0:
-            self.player_label.configure(text="🎮 Player 1's Turn (Red)", fg='#e74c3c')
+            self.player_label.configure(text="Player 1's Turn (Red)", fg='#e74c3c')
         else:
-            self.player_label.configure(text="🎮 Player 2's Turn (Yellow)", fg='#f1c40f')
+            self.player_label.configure(text="Player 2's Turn (Yellow)", fg='#f1c40f')
     
     def reset_game(self):
         self.board = self.create_board()
@@ -241,7 +241,7 @@ class Connect4Game:
         
         self.game_over = False
         self.turn = 0
-        self.player_label.configure(text="🎮 Player 1's Turn (Red)", fg='#e74c3c')
+        self.player_label.configure(text="Player 1's Turn (Red)", fg='#e74c3c')
 
 def main():
     root = tk.Tk()
